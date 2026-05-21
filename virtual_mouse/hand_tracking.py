@@ -10,3 +10,16 @@ class HandTracker:
             min_detection_confidence=detection_con,
             min_tracking_confidence=track_con
         )
+
+    def find_hand_landmarks(self, image, draw=False):
+        img_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        results = self.hands.process(img_rgb)
+        landmarks = []
+        h, w, _ = image.shape
+
+        if results.multi_hand_landmarks:
+            for hand_landmarks in results.multi_hand_landmarks:
+                for idx, lm in enumerate(hand_landmarks.landmark):
+                    cx, cy = int(lm.x * w), int(lm.y * h)
+                    landmarks.append((idx, cx, cy))
+        return landmarks
