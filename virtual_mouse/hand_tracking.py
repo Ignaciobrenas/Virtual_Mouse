@@ -38,3 +38,4 @@ class HandTracker:
         return landmarks
 
 # Landmark drawing and detection optimized
+# Landmark drawing and detection optimized
