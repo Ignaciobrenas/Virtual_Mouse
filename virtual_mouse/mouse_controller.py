@@ -66,3 +66,4 @@ class MouseController:
     def set_margin(self, value):
         self.margin = max(10, int(value))
 # Zero delay configuration enabled
+# Zero delay configuration enabled
