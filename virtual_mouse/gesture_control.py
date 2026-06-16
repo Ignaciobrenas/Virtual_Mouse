@@ -21,3 +21,4 @@ class GestureController:
             self.last_left_click_time = now
             return True
         return False
+# Refined sensitivity thresholds
