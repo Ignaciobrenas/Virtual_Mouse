@@ -106,3 +106,4 @@ class GestureController:
         return gesture == "LEFT_CLICK"
 # Vertical scroll support
 # Drag and drop hold pinch support
+# Two finger scroll gesture support
