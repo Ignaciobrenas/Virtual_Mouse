@@ -108,3 +108,4 @@ class GestureController:
 # Drag and drop hold pinch support
 # Two finger scroll gesture support
 # Drag and drop hold pinch gesture
+# Multi-gesture state machine validation
