@@ -26,3 +26,4 @@ def play_action_sound():
             pass
 
     threading.Thread(target=_beep, daemon=True).start()
+# Non-windows fallback
