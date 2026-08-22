@@ -495,3 +495,4 @@ def launch_gui():
 if __name__ == "__main__":
     launch_gui()
 # Fast video canvas buffer
+# Preview toggle and mouse pause controls
