@@ -214,3 +214,5 @@ python -m unittest discover tests
 
 - **Ignaciobrenas**
   - Personal portfolio / Proyecto personal de aprendizaje en Python y Computer Vision.
+
+<!-- Bilingual English guide validated -->
