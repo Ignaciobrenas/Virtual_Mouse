@@ -666,3 +666,5 @@ if __name__ == "__main__":
     launch_gui()
 
 # Dynamic language switcher dropdown integrated
+
+# Two-hands mode: right hand cursor, left hand scroll
