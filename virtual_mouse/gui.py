@@ -668,3 +668,5 @@ if __name__ == "__main__":
 # Dynamic language switcher dropdown integrated
 
 # Two-hands mode: right hand cursor, left hand scroll
+
+# Tony Stark repulsor trigger for Copilot
