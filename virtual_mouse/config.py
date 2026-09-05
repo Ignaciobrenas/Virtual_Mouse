@@ -4,19 +4,16 @@ import json
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
 
 DEFAULT_CONFIG = {
+    "language": "es",
     "smoothening": 4,
     "margin": 50,
     "click_threshold": 35,
     "right_click_threshold": 35,
     "scroll_speed": 20,
     "sound_enabled": True,
-    "camera_index": 0,
-    "active_gestures": {
-        "left_click": True,
-        "right_click": True,
-        "scroll": True,
-        "drag_drop": True
-    }
+    "two_hands_mode": True,
+    "tony_stark_mode": True,
+    "camera_index": 0
 }
 
 
