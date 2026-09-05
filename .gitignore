@@ -16,3 +16,8 @@ ENV/
 .vscode/
 .idea/
 *.swp
+
+# Local configuration runtime
+virtual_mouse/config.json
+config.json
+
