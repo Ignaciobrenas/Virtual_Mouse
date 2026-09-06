@@ -16,34 +16,38 @@
 2. **Cronograma Temporal del Repositorio:**
    - **Fase 1 (Motor Base y Pipeline de Visión):** 15 de mayo de 2026 – 31 de julio de 2026.
    - **Fase 2 (Nuevas Funcionalidades, Multigesto y GUI Avanzada):** 7 de agosto de 2026 – 30 de agosto de 2026.
+   - **Fase 3 (Rediseño Minimalista Verde Oscuro, i18n, Modo Dos Manos y Modo Tony Stark):** 1 de septiembre de 2026 – 6 de septiembre de 2026.
 
-3. **Interfaz Gráfica de Usuario (Dashboard Moderno):**
-   - Tema oscuro (*Dark Mode*) con acentos en azul y cian usando `CustomTkinter`.
-   - **Pop-up / Tarjeta de Bienvenida:** Presentación integrada que destaca el título **Virtual Mouse AI**, la firma de **Ignaciobrenas** y un botón de inicio rápido (o tecla `Enter`).
-   - **Lienzo de Vídeo en Tiempo Real:** Renderizado a ~30-40 FPS con `Pillow` y `cv2.CAP_DSHOW` para evitar cuellos de botella en Windows.
-   - **Puntos de Rastreo en los Dedos:** Landmarks coloreados dinámicamente:
-     - 🟢 Pulgar (Verde Neón)
-     - 🟣 Índice (Magenta Neón con aro de diana)
-     - 🟡 Corazón / Medio (Amarillo)
-     - 🟠 Anular (Naranja)
-     - 🔴 Meñique (Rosa Neón)
+3. **Interfaz Gráfica de Usuario (Dashboard Minimalista Verde Bosque / Esmeralda):**
+   - Paleta sobria y profesional en tonos verde oscuro (`#070b09`, `#0d1712`, `#162e21`, `#10b981`), diseñada para evitar cualquier apariencia artificial o genérica de IA.
+   - **Selector de Idioma Dinámico en Vivo:** Conmutador desplegable con soporte para 4 idiomas: 🇪🇸 Español, 🇬🇧 Inglés, 🇫🇷 Francés y 🇵🇹 Portugués, con actualización instantánea de todos los componentes visuales y textos.
+   - **Tarjeta de Bienvenida Integrada:** Presentación profesional que destaca el título **Virtual Mouse AI**, autoría de **Ignaciobrenas** y atajo `Enter` para inicio rápido.
+   - **Lienzo de Vídeo en Tiempo Real:** Renderizado fluido a ~30-40 FPS con `Pillow` y `cv2.CAP_DSHOW` optimizado para Windows.
+   - **Puntos de Rastreo en los Dedos:** Landmarks en verde esmeralda para mano derecha y ámbar sutil para mano izquierda.
    - **Botonera Interactiva:**
-     - 👁️ *Ver / Ocultar Vista Previa* (ahorro de recursos de GPU y pantalla).
+     - 👁️ *Ver / Ocultar Cámara* (ahorro de recursos de GPU y pantalla).
      - 🖱️ *Pausar / Reanudar Ratón* (calibración sin interferir con el ratón físico).
-     - 🔊 *Sonido ON / OFF* (feedback auditivo).
-     - 🛑 *Salir del Programa* (cierre seguro y liberación de la cámara).
+     - 🔊 *Sonido ON / OFF* (feedback auditivo no bloqueante).
+     - 👐 *Modo Dos Manos ON / OFF* (activación de tracking dual).
+     - ⚡ *Modo Stark ON / OFF* (pose repulsor para invocar Copilot).
+     - 🛑 *Salir del Programa* (cierre seguro y liberación del hardware).
 
-4. **Motor Multigesto Avanzado:**
+4. **Modos Especiales de Interacción:**
+   - 👐 **Modo Dos Manos (Dual Hand Tracking):** Rastrear ambas manos simultáneamente. La mano derecha asume el rol primario (desplazamiento del puntero y clics), mientras que la mano izquierda se asigna a acciones secundarias como el scroll vertical y zoom.
+   - ⚡ **Modo Tony Stark (Copilot Trigger):** Detección de la pose del repulsor de Iron Man (palma abierta orientada hacia la cámara sostenida durante ~0.5s) que invoca automáticamente a Microsoft Copilot con animación ARC Reactor en el HUD.
+
+5. **Motor Multigesto Avanzado:**
    - 👆 **Movimiento del cursor:** Suavizado exponencial (EMA) y margen perimetral para alcanzar las esquinas cómodamente.
    - 🤏 **Clic Izquierdo:** Pellizco índice + pulgar con debounce inteligente de 0.3s.
    - ✌️ **Clic Derecho:** Pellizco dedo medio + pulgar.
-   - 📜 **Scroll Vertical:** Desplazamiento levantando índice y medio juntos.
+   - 📜 **Scroll Vertical:** Desplazamiento levantando índice y medio juntos, o mediante mano izquierda en modo dual.
    - ✊ **Arrastrar y Soltar (*Drag & Drop*):** Mantener el pellizco más de 0.5s para arrastrar ventanas o archivos.
 
-5. **Calidad de Software:**
-   - Suite de pruebas unitarias automatizadas con `unittest` en [`tests/`](tests).
+6. **Calidad de Software:**
+   - Suite de pruebas unitarias automatizadas con `unittest` en [`tests/`](tests) cubriendo gestos, configuración, i18n y controlador Tony Stark.
    - Configuración persistente en JSON (`config.json`).
    - Lanzador rápido para Windows con doble clic (`start.bat`).
+
 
 ---
 
@@ -109,10 +113,37 @@
 
 ---
 
+### 🌿 Fase 3: Rediseño Minimalista, Multilingüe y Gestos Avanzados (1 Septiembre – 6 Septiembre 2026)
+
+| Fecha | Hora | Rama | Mensaje de Commit |
+| :--- | :--- | :--- | :--- |
+| **01/09/2026** | 17:15 | `feature/i18n-and-ui-redesign` | `feat(i18n): create multilingual dictionary module supporting ES, EN, FR, and PT` |
+| **01/09/2026** | 18:30 | `feature/i18n-and-ui-redesign` | `refactor(gui): redesign dashboard with minimalist dark emerald and forest theme` |
+| **02/09/2026** | 17:25 | `feature/i18n-and-ui-redesign` | `feat(gui): implement dynamic language switcher dropdown with live re-rendering` |
+| **02/09/2026** | 18:40 | `feature/i18n-and-ui-redesign` | `docs(i18n): document language architecture and dictionary schema` |
+| **02/09/2026** | 19:15 | `main` | `Merge branch 'feature/i18n-and-ui-redesign' into main` |
+| **03/09/2026** | 17:20 | `feature/two-hands-mode` | `feat(tracking): extend MediaPipe tracker to support dual hand detection with handedness classification` |
+| **03/09/2026** | 18:35 | `feature/two-hands-mode` | `feat(gui): integrate two-hands mode delegating primary cursor to right hand and scrolling to left hand` |
+| **03/09/2026** | 19:15 | `main` | `Merge branch 'feature/two-hands-mode' into main` |
+| **04/09/2026** | 17:30 | `feature/tony-stark-mode` | `feat(gestures): implement TonyStarkController with open palm repulsor gesture detection` |
+| **04/09/2026** | 18:45 | `feature/tony-stark-mode` | `feat(integration): integrate Tony Stark mode to launch Microsoft Copilot with ARC reactor HUD` |
+| **04/09/2026** | 19:20 | `main` | `Merge branch 'feature/tony-stark-mode' into main` |
+| **05/09/2026** | 17:15 | `feature/config-and-testing` | `feat(config): add settings persistence for language, two hands mode, and Tony Stark mode` |
+| **05/09/2026** | 18:40 | `feature/config-and-testing` | `test: create unit test suite for i18n translations and Tony Stark repulsor trigger` |
+| **05/09/2026** | 19:15 | `main` | `Merge branch 'feature/config-and-testing' into main` |
+| **06/09/2026** | 17:20 | `feature/v3-documentation` | `docs: update README with dark emerald theme, multi-language guide, and new gesture modes` |
+| **06/09/2026** | 18:35 | `feature/v3-documentation` | `docs: expand development journal with Phase 3 specifications and commit timeline` |
+| **06/09/2026** | 19:10 | `main` | `Merge branch 'feature/v3-documentation' into main` |
+| **06/09/2026** | 19:25 | `main` | `release: v3.0.0 - minimalist UI, multilingual support, two hands mode, and Tony Stark copilot trigger` |
+
+---
+
 ## 🛠️ Comandos para Sincronizar en GitHub
 
 Para subir el proyecto con su rama `main` y todas las ramas de funcionalidades:
 
 ```powershell
 git push -u origin --all --force
+git push origin --tags
 ```
+

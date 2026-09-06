@@ -205,5 +205,3 @@ def t(key, lang="es"):
     """Devuelve la traducción para la clave solicitada en el idioma actual."""
     lang_dict = TRANSLATIONS.get(lang, TRANSLATIONS["es"])
     return lang_dict.get(key, TRANSLATIONS["es"].get(key, key))
-
-# Schema verified for ES, EN, FR, PT
